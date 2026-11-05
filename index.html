@@ -1,1 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f2ebde">
+  <meta name="description" content="Детская флип-книга «Заяц и главный зимний секрет»: 15 иллюстрированных сцен, перелистывание страниц и путешествие по осеннему лесу.">
+  <title>Заяц и главный зимний секрет · Флип-книга</title>
+  <link rel="stylesheet" href="storybook.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="home" class="brand" aria-label="На обложку"><span class="brand-mark" aria-hidden="true">❧</span><span>Лесная библиотека<small>СКАЗКИ, КОТОРЫЕ ОЖИВАЮТ</small></span></button>
+    <div class="top-actions"><button id="contents" class="soft-button"><span aria-hidden="true">▦</span> <span>Все сцены</span></button><button id="narrate" class="icon-button" title="Прочитать вслух" aria-label="Прочитать вслух"><svg viewBox="0 0 24 24"><path d="m11 5-6 4H2v6h3l6 4V5Zm4 3c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg></button><button id="fullscreen" class="icon-button" title="На весь экран" aria-label="На весь экран"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
+  </header>
+  <main>
+    <div class="above-book"><span id="chapter-label">ИНТЕРАКТИВНАЯ КНИГА-КОМИКС</span><span id="season-label">Осень → Зима</span></div>
+    <section id="book" class="book" aria-label="Книга Заяц и главный зимний секрет" tabindex="0"></section>
+    <div class="reader-controls"><button id="prev" class="nav-button" aria-label="Предыдущий разворот">←</button><div class="progress-wrap"><span id="page-title">Обложка</span><div class="progress-track"><div id="progress"></div></div><span id="page-count">Начало путешествия</span></div><button id="next" class="nav-button" aria-label="Следующий разворот">→</button></div>
+    <p class="reader-hint">Листайте уголком страницы, стрелками или свайпом <span>·</span> Нажимайте на картинки и читайте вместе с героями</p>
+  </main>
+  <dialog id="chapters-dialog"><div class="dialog-head"><div><span class="eyebrow">ЗАЯЦ И ГЛАВНЫЙ ЗИМНИЙ СЕКРЕТ</span><h2>Наше путешествие</h2></div><button id="close-dialog" class="icon-button" aria-label="Закрыть">✕</button></div><div id="chapters-grid" class="chapters-grid"></div><button id="intro-link" class="text-button">Начать с первой сцены →</button></dialog>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <script src="scenes.js"></script><script src="reader.js"></script>
+</body>
+</html>
 
